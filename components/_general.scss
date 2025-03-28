@@ -1,0 +1,39 @@
+@import "mixins";
+
+.main__section--title {
+  font-size: 4.2rem;
+  font-weight: bold;
+}
+.section__title {
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+
+.section__description {
+  font-size: 1.4rem;
+  color: var(--color-grayish-blue);
+}
+
+.section_button {
+  font-size: 1.2rem;
+  font-weight: 500;
+  background-color: var(--color-soft-blue);
+  border-radius: var(--default-radius);
+  box-shadow: 0 0.4rem 0.8rem 0.2rem rgba(0, 0, 0, 0.1);
+  color: white;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.logo-content {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.logo-content__img {
+  width: 4rem;
+}
+.logo-content__title {
+  font-weight: 500;
+}

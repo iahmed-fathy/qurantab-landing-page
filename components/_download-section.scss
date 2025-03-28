@@ -1,0 +1,67 @@
+@import "mixins";
+
+.download {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--default-padding) * 2);
+  max-width: 100%;
+  .download__content {
+    margin: auto;
+    text-align: center;
+    max-width: 50rem;
+    @include mobile {
+      text-align: unset;
+    }
+    .section__description {
+      margin-top: calc(var(--default-padding) / 2);
+    }
+  }
+  .download__cards {
+    display: flex;
+    justify-content: space-around;
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+    }
+    .download__cards--card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 24rem;
+      height: 26rem;
+      gap: calc(var(--default-padding) / 2);
+      padding: var(--default-padding);
+      box-shadow: 0 0.4rem 0.8rem 0.2rem rgba(0, 0, 0, 0.1);
+      position: relative;
+      .browser__icon {
+        width: 6rem;
+        justify-self: center;
+      }
+      .card__title {
+        font-size: 1.8rem;
+        font-weight: bold;
+      }
+      .section_button {
+        padding: 1.2rem 2.4rem;
+        align-self: stretch;
+        text-align: center;
+        margin-top: calc(var(--default-padding) * 3);
+      }
+      &:nth-child(3) .section_button {
+        user-select: none;
+        pointer-events: none;
+        background-color: var(--color-grayish-blue);
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        background: url(../images/bg-dots.svg);
+        height: 0.3rem;
+        bottom: calc(var(--default-padding) * 5);
+        background-size: contain;
+      }
+    }
+  }
+}
